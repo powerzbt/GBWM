@@ -5,7 +5,7 @@ How to use Reinforcement learning for financial trading using Simulated Stock Da
 
 
 ## **Demonstration**
-Open rl_demo.mlx or dp_demo.mlx.
+Open **[rl_demo.pdf](https://github.com/powerzbt/GBWM/blob/main/rl_demo.pdf)** or **[dp_demo.pdf](https://github.com/powerzbt/GBWM/blob/main/dp_demo.pdf)**.
 
 
 
