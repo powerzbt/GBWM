@@ -1,6 +1,26 @@
 
 <h1 align="center"> Dynamic Goals-Based Wealth Management </h1>
 
+
+Update 9 Dec, 2022:
+To run:
+
+Directly run GBWM.mlx
+
+OR 
+
+set up first by
+
+1. Specifying the symbols of stocks want to invest in
+2. Specifying the period of investment (in years) 
+3. Specifying the total expected return 
+
+
+
+
+
+
+Original Post:
 Portfolio Optimization by Reinforcement Learning and Dynamic Programming with **[MATLAB](https://www.mathworks.com/products/matlab.html)**.
 
 
@@ -96,5 +116,7 @@ traces = dp_plot_2(ef, total_itr, T, w0_idx, G, best_ms, tp_tables, grid);
 
 
 *Author: Botao Zhang (bz2462@columbia.edu) *
-
+*Bowen Fang (bf2504@columbia.edu) *
+*Chongyi Chie (cc4893@columbia.edu) *
+*Yichen Yao (yy3204@columbia.edu) *
 * *
