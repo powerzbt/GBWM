@@ -22,6 +22,10 @@ Set up and run **[GBWM-RLToolbox/main.mlx](https://github.com/powerzbt/GBWM/blob
 2. Specifying the period of investment (in years) 
 3. Specifying the total expected return 
 
+## **Presentation**:
+
+[Goal-Based Wealth Management with Reinforcement Learning](https://github.com/powerzbt/GBWM/blob/main/Goal-Based-Wealth-Management-with-Reinforcement-Learning.pdf) 
+
 
 ## **Demo**:
 
@@ -50,7 +54,7 @@ legend({'URTH'; 'HYG';'LQD';'DBC'});
 
 ```
   
-### Training with Mylti-Factor Environment
+### Training with Multi-Factor Environment
 ```matlab:Code
 env =  MultiFactorGBWMEnvironment(G, T, grid, cash, w0_idx, pwgt, pret, prsk, line, simulate_n_periods, simulate_dt, simulate_n_trials);
 
@@ -110,6 +114,7 @@ env =  SparseGoalGBWMEnvironment(G, T, grid, cash, w0_idx, pwgt, pret, prsk, sim
 -------------------------------------------------------
 
 <h2 align="left"> Previous Methods </h2>
+
 Portfolio Optimization by Reinforcement Learning (Q-learning) and Dynamic Programming with **[MATLAB](https://www.mathworks.com/products/matlab.html)**.
 
 
@@ -164,17 +169,13 @@ Optimal Q-learning Policy (Indicated by color, the colder the riskier):
  
 
 ### Training with different Initial Wealth (Explore the state space more sufficiently)
-```matlab:Code
-w0 = 150;
-total_itr = 100;
-qln_prams = [T, w0, maxItr, alpha, gamma, G];
-[mus_qln, trace] = Qln_suggestion(Q, R, TP_cmf_j, state_wealthspace, qln_prams);
-n = Qln_plot(Q, R, TP_cmf_j, actions_mu_sig, state_wealthspace, qln_prams, total_itr);
-```
- 
-<img src="rl_demo_images/figure_5.png" style="width: 550px;"/> 
- 
-<img src="rl_demo_images/figure_4.png" style="width: 550px;"/>
+
+
+ <p float="left">
+  <img src="rl_demo_images/figure_5.png" height="250px" />
+  <img src="rl_demo_images/figure_4.png" height="250px" />  
+</p>
+
 
 Higher hitting rate achieved!
 
@@ -185,14 +186,14 @@ Higher hitting rate achieved!
  
 
 
-## **DEMO - DP**:
- <img src="dp_demo_images/figure_0.png" style="width: 550px;"/>
+## **DEMO - DP**: 
 
-```matlab:Code
-traces = dp_plot_2(ef, total_itr, T, w0_idx, G, best_ms, tp_tables, grid);
-```
-   
-<img src="dp_demo_images/figure_2.png" style="width: 550px;"/> 
+
+
+ <p float="left">
+  <img src="dp_demo_images/figure_0.png" height="250px" />
+  <img src="dp_demo_images/figure_2.png" height="250px" />  
+</p>
 
 
 ```matlab:Code
@@ -201,18 +202,9 @@ traces = dp_plot_2(ef, total_itr, T, w0_idx, G, best_ms, tp_tables, grid);
 
 ### Baseline Policy
 
-```matlab:Code
-Q = Init_Q(state_wealthspace, actions_mu_sig, T);
-[mus_qln, trace] = Qln_suggestion(Q, R, TP_cmf_j, state_wealthspace, qln_prams);
 
-total_itr = 100;
-n = Qln_plot(Q, R, TP_cmf_j, actions_mu_sig, state_wealthspace, qln_prams, total_itr);
-```
- 
-<img src="rl_demo_images/figure_8.png" style="width: 550px;"/>   
+<img src="rl_demo_images/figure_8.png" style="height: 250px;"/>   
 
-*Author: Botao Zhang (bz2462@columbia.edu) 
-* **[Bowen Fang](https://github.com/bwfbowen/RL_GBWM)** (bf2504@columbia.edu)
-*Chongyi Chie (cc4893@columbia.edu)
-*Yichen Yao (yy3204@columbia.edu)
+## **Author**:
+* Botao Zhang (bz2462@columbia.edu) * Bowen Fang (bf2504@columbia.edu) * Chongyi Chie (cc4893@columbia.edu) * Yichen Yao (yy3204@columbia.edu)
 
