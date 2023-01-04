@@ -25,7 +25,88 @@ Set up and run **[GBWM-RLToolbox/main.mlx](https://github.com/powerzbt/GBWM/blob
 
 ## **Demo**:
 
+```matlab:Code 
+initDate = '2017-01-01';
+endDate = '2018-01-01';
+initDate = datetime(initDate, 'InputFormat','yyyy-MM-dd');
+endDate = datetime(endDate, 'InputFormat','yyyy-MM-dd');
+portfolio = ["URTH"; "HYG";"LQD";"DBC"];
+c = containers.Map;
+for k=1:length(portfolio)
+   symbol = portfolio(k);
+   data = Yahooscraper(convertStringsToChars(symbol), initDate, endDate, '1d');
+   TT = table2timetable(data(:,[1,4]));
+   TT.Properties.VariableNames = {convertStringsToChars(symbol)};
+   c(symbol) = TT;
+end
+f = @(i) c(portfolio(i));
+T = synchronize(f(1),f(2),f(3), f(4), 'Intersection');
+prices = [T.URTH, T.HYG, T.LQD, T.DBC];
+ts = timeseries(prices, datestr(T.Date));
+ts.Name = " Portfolio Prices over Time";
+plot(ts);
+legend({'URTH'; 'HYG';'LQD';'DBC'});
+...
 
+```
+  
+### Training with Mylti-Factor Environment
+```matlab:Code
+env =  MultiFactorGBWMEnvironment(G, T, grid, cash, w0_idx, pwgt, pret, prsk, line, simulate_n_periods, simulate_dt, simulate_n_trials);
+
+``` 
+
+
+Optimal Policy (Indicated by color, the colder the riskier):
+
+<img src="GBWM-RLToolbox/images/MultiFactor_policy.png" style="width: 550px;"/>
+
+100 Investment Trials with Optimal Policy: (Red Lines: successful investments)
+
+<img src="GBWM-RLToolbox/images/MultiFactor_investment.png" style="width: 550px;"/>
+
+Training Episodes:
+
+<img src="GBWM-RLToolbox/images/LineReward_training.png" style="width: 550px;"/>
+
+
+### Training with Line Reward Environment
+```matlab:Code
+env =  LineGoalGBWMEnvironment(G, T, grid, cash, w0_idx, pwgt, pret, prsk, line, simulate_n_periods, simulate_dt, simulate_n_trials);
+
+``` 
+
+ <p float="left">
+  <img src="GBWM-RLToolbox/images/LineReward_policy.png" height="250px" />
+  <img src="GBWM-RLToolbox/images/LineReward_investment.png" height="250px" /> 
+  <img src="GBWM-RLToolbox/images/LineReward_training.png" height="250px" />
+</p>
+  
+### Training with Scale Goal Environment
+```matlab:Code
+env =  ScaleGBWMEnvironment(G, T, grid, cash, w0_idx, pwgt, pret, prsk, gamma, simulate_n_periods, simulate_dt, simulate_n_trials);
+
+``` 
+
+ <p float="left">
+  <img src="GBWM-RLToolbox/images/ScaleGoal_policy.png" height="250px" />
+  <img src="GBWM-RLToolbox/images/ScaleGoal_investment.png" height="250px" /> 
+  <img src="GBWM-RLToolbox/images/ScaleGoal_training.png" height="250px" />
+</p>
+  
+  
+ ### Training with Sparse Goal Environment
+```matlab:Code
+env =  SparseGoalGBWMEnvironment(G, T, grid, cash, w0_idx, pwgt, pret, prsk, simulate_n_periods, simulate_dt, simulate_n_trials);
+
+``` 
+
+ <p float="left">
+  <img src="GBWM-RLToolbox/images/SparseGoal_policy.png" height="250px" />
+  <img src="GBWM-RLToolbox/images/SparseGoal_investment.png" height="250px" /> 
+  <img src="GBWM-RLToolbox/images/SparseGoal_training.png" height="250px" />
+</p>
+  
 -------------------------------------------------------
 
 <h2 align="left"> Previous Methods </h2>
