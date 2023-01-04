@@ -125,12 +125,12 @@ Portfolio Optimization by Reinforcement Learning (Q-learning) and Dynamic Progra
 
 ## **To run**:
 Reinforcement-learning:
-	Open and run **[agent/main_qln.m](https://github.com/powerzbt/GBWM/blob/main/GBWM-PreviousMethods/agents/main_rl.m)** 
+	Open and run **[agent/main_qln.m](https://github.com/powerzbt/GBWM/blob/main/GBWM-PreviousMethods/agents/main_qln.m)** 
 OR
 	**[rl_demo.mlx](https://github.com/powerzbt/GBWM/blob/main/GBWM-PreviousMethods/rl_demo.mlx)**.
 
 Dynamic Programming:
-	Open and run **[agent/main_dp.m](https://github.com/powerzbt/GBWM/blob/main/agents/GBWM-PreviousMethods/main_dp.m)** 
+	Open and run **[agent/main_dp.m](https://github.com/powerzbt/GBWM/blob/main/GBWM-PreviousMethods/agents/main_dp.m)** 
 OR
 	**[dp_demo.mlx](https://github.com/powerzbt/GBWM/blob/main/GBWM-PreviousMethods/dp_demo.mlx)**.
 
