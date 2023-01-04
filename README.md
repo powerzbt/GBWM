@@ -111,57 +111,59 @@ env =  SparseGoalGBWMEnvironment(G, T, grid, cash, w0_idx, pwgt, pret, prsk, sim
   <img src="GBWM-RLToolbox/images/SparseGoal_training.png" height="200px" />
 </p>
   
+  
+   
+
 -------------------------------------------------------
 
 <h2 align="left"> Previous Methods </h2>
 
+
 Portfolio Optimization by Reinforcement Learning (Q-learning) and Dynamic Programming with **[MATLAB](https://www.mathworks.com/products/matlab.html)**.
 
+ 
 
 ## **To run**:
 Reinforcement-learning:
-	Open and run **[agent/main_qln.m](https://github.com/powerzbt/GBWM/blob/main/agents/main_rl.m)** 
+	Open and run **[agent/main_qln.m](https://github.com/powerzbt/GBWM/blob/main/GBWM-PreviousMethods/agents/main_rl.m)** 
 OR
-	**[rl_demo.mlx](https://github.com/powerzbt/GBWM/blob/main/rl_demo.mlx)**.
+	**[rl_demo.mlx](https://github.com/powerzbt/GBWM/blob/main/GBWM-PreviousMethods/rl_demo.mlx)**.
 
 Dynamic Programming:
-	Open and run **[agent/main_dp.m](https://github.com/powerzbt/GBWM/blob/main/agents/main_dp.m)** 
+	Open and run **[agent/main_dp.m](https://github.com/powerzbt/GBWM/blob/main/agents/GBWM-PreviousMethods/main_dp.m)** 
 OR
-	**[dp_demo.mlx](https://github.com/powerzbt/GBWM/blob/main/dp_demo.mlx)**.
+	**[dp_demo.mlx](https://github.com/powerzbt/GBWM/blob/main/GBWM-PreviousMethods/dp_demo.mlx)**.
 
+ 
 
 ## **Demonstration**:
 Open 
-	**[rl_demo.pdf](https://github.com/powerzbt/GBWM/blob/main/rl_demo.pdf)** 
+	**[rl_demo.pdf](https://github.com/powerzbt/GBWM/blob/main/GBWM-PreviousMethods/rl_demo.pdf)** 
 OR
-	**[dp_demo.pdf](https://github.com/powerzbt/GBWM/blob/main/dp_demo.pdf)**.
+	**[dp_demo.pdf](https://github.com/powerzbt/GBWM/blob/main/GBWM-PreviousMethods/dp_demo.pdf)**.
 
+```matlab:Code
+
+```
 
 ## **DEMO - RL**:
 
-```matlab:Code
-clear
-clc
-```
+
   
 ### Training with Fixed Initial Wealth 
-```matlab:Code
-total_itr = 100;
-[mus_qln, trace] = Qln_suggestion(Q, R, TP_cmf_j, state_wealthspace, qln_prams);
-n = Qln_plot(Q, R, TP_cmf_j, actions_mu_sig, state_wealthspace, qln_prams, total_itr);
-``` 
+
 
 Sample Investment Sequence (2-D State Space: investment period & wealth in hand):
 
-<img src="rl_demo_images/figure_0.png" style="width: 550px;"/>
+<img src="GBWM-PreviousMethods/rl_demo_images/figure_0.png" style="width: 550px;"/>
 
 Optimal Q-learning Policy (Indicated by color, the colder the riskier):
 
-<img src="rl_demo_images/figure_2.png" style="width: 550px;"/>
+<img src="GBWM-PreviousMethods/rl_demo_images/figure_2.png" style="width: 550px;"/>
 
 100 Investment Trials with Optimal Policy: (Red Lines: successful investments)
 
-<img src="rl_demo_images/figure_1.png" style="width: 550px;"/>
+<img src="GBWM-PreviousMethods/rl_demo_images/figure_1.png" style="width: 550px;"/>
 
 ```matlab:Code
 
@@ -172,8 +174,8 @@ Optimal Q-learning Policy (Indicated by color, the colder the riskier):
 
 
  <p float="left">
-  <img src="rl_demo_images/figure_5.png" height="250px" />
-  <img src="rl_demo_images/figure_4.png" height="250px" />  
+  <img src="GBWM-PreviousMethods/rl_demo_images/figure_5.png" height="250px" />
+  <img src="GBWM-PreviousMethods/rl_demo_images/figure_4.png" height="250px" />  
 </p>
 
 
@@ -191,8 +193,8 @@ Higher hitting rate achieved!
 
 
  <p float="left">
-  <img src="dp_demo_images/figure_0.png" height="250px" />
-  <img src="dp_demo_images/figure_2.png" height="250px" />  
+  <img src="GBWM-PreviousMethods/dp_demo_images/figure_0.png" height="250px" />
+  <img src="GBWM-PreviousMethods/dp_demo_images/figure_2.png" height="250px" />  
 </p>
 
 
@@ -203,7 +205,7 @@ Higher hitting rate achieved!
 ### Baseline Policy
 
 
-<img src="rl_demo_images/figure_8.png" style="height: 250px;"/>   
+<img src="GBWM-PreviousMethods/rl_demo_images/figure_8.png" style="height: 250px;"/>   
 
 ## **Author**:
 * Botao Zhang (bz2462@columbia.edu) * Bowen Fang (bf2504@columbia.edu) * Chongyi Chie (cc4893@columbia.edu) * Yichen Yao (yy3204@columbia.edu)
