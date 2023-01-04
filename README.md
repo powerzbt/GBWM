@@ -81,9 +81,9 @@ env =  LineGoalGBWMEnvironment(G, T, grid, cash, w0_idx, pwgt, pret, prsk, line,
 ``` 
 
  <p float="left">
-  <img src="GBWM-RLToolbox/images/LineReward_policy.png" height="250px" />
-  <img src="GBWM-RLToolbox/images/LineReward_investment.png" height="250px" /> 
-  <img src="GBWM-RLToolbox/images/LineReward_training.png" height="250px" />
+  <img src="GBWM-RLToolbox/images/LineReward_policy.png" height="200px" />
+  <img src="GBWM-RLToolbox/images/LineReward_investment.png" height="200px" /> 
+  <img src="GBWM-RLToolbox/images/LineReward_training.png" height="200px" />
 </p>
   
 ### Training with Scale Goal Environment
@@ -93,9 +93,9 @@ env =  ScaleGBWMEnvironment(G, T, grid, cash, w0_idx, pwgt, pret, prsk, gamma, s
 ``` 
 
  <p float="left">
-  <img src="GBWM-RLToolbox/images/ScaleGoal_policy.png" height="250px" />
-  <img src="GBWM-RLToolbox/images/ScaleGoal_investment.png" height="250px" /> 
-  <img src="GBWM-RLToolbox/images/ScaleGoal_training.png" height="250px" />
+  <img src="GBWM-RLToolbox/images/ScaleGoal_policy.png" height="200px" />
+  <img src="GBWM-RLToolbox/images/ScaleGoal_investment.png" height="200px" /> 
+  <img src="GBWM-RLToolbox/images/ScaleGoal_training.png" height="200px" />
 </p>
   
   
@@ -106,9 +106,9 @@ env =  SparseGoalGBWMEnvironment(G, T, grid, cash, w0_idx, pwgt, pret, prsk, sim
 ``` 
 
  <p float="left">
-  <img src="GBWM-RLToolbox/images/SparseGoal_policy.png" height="250px" />
-  <img src="GBWM-RLToolbox/images/SparseGoal_investment.png" height="250px" /> 
-  <img src="GBWM-RLToolbox/images/SparseGoal_training.png" height="250px" />
+  <img src="GBWM-RLToolbox/images/SparseGoal_policy.png" height="200px" />
+  <img src="GBWM-RLToolbox/images/SparseGoal_investment.png" height="200px" /> 
+  <img src="GBWM-RLToolbox/images/SparseGoal_training.png" height="200px" />
 </p>
   
 -------------------------------------------------------
