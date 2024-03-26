@@ -1,5 +1,5 @@
 
-Blog can be found at **[MathWorks Blogs](https://www.linkedin.com/in/alejandra-pena-ordieres](https://blogs.mathworks.com/finance/2023/08/22/reinforcement-learning-as-your-portfolio-advisor/)**
+Blog can be found at **[MathWorks Blogs](https://blogs.mathworks.com/finance/2023/08/22/reinforcement-learning-as-your-portfolio-advisor)**
 
 
 
