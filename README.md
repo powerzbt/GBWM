@@ -1,5 +1,4 @@
 
-**[MathWorks Blog can be found here](https://blogs.mathworks.com/finance/2023/08/22/reinforcement-learning-as-your-portfolio-advisor)**
 
 
 
@@ -9,6 +8,8 @@
 
 This project suggests using reinforcement learning to address portfolio optimization challenges. It is mentored by Mathworks'
 **[Valerio Sperandeo](https://wiza.co/d/the-mathworks_2/d598/valerio-sperandeo)** and **[Alejandra Pena-Ordieres](https://www.linkedin.com/in/alejandra-pena-ordieres)**. 
+MathWorks Blog can be found **[HERE](https://blogs.mathworks.com/finance/2023/08/22/reinforcement-learning-as-your-portfolio-advisor)**
+
 
 Simply put, the purpose is to optimize the probability of meeting the target after making periodic investments in a particular portfolio by altering weights based on remaining time and wealth in hand.
 
